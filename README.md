@@ -124,21 +124,55 @@ root/
             │       ├── model/     # Data Models
             │       └── servlet/   # Web Servlets
             └── webapp/
-                └── WEB-INF/
-                    ├── lib/
-                    │   ├── mysql-connector-java-8.x.x.jar
-                    │   ├── taglibs-standard-impl-1.2.x.jar
-                    │   └── taglibs-standard-spec-1.2.x.jar
-                    └── web.xml
+                ├── WEB-INF/
+                │   ├── lib/
+                │   │   ├── mysql-connector-java-8.x.x.jar
+                │   │   ├── taglibs-standard-impl-1.2.x.jar
+                │   │   └── taglibs-standard-spec-1.2.x.jar
+                │   └── web.xml
+                ├── META-INF/
+                ├── images/
+                ├── *.jsp files
+                └── resources/
+                    ├── CSS/
+                    └── JS/
 ```
+
+### Directory Structure Breakdown
+
+#### Root Directory
+- `database/`: Contains SQL scripts for database setup
+
+#### Milestone4 Project Structure
+- `src/main/java/`: Java source code
+  - `dal/`: Data Access Layer (Data Access Objects)
+  - `model/`: Data model classes
+  - `servlet/`: Web servlet classes
+
+- `webapp/`: Web application resources
+  - `WEB-INF/`: Configuration and library directory
+    - `lib/`: External JAR libraries
+      - MySQL Connector
+      - Taglib libraries
+    - `web.xml`: Web application configuration
+  - `META-INF/`: Application metadata
+  - `images/`: Image resources for the web application
+  - `*.jsp`: JavaServer Pages (view layer)
+  - `resources/`: Static web resources
+    - `CSS/`: Cascading Style Sheets
+    - `JS/`: JavaScript files
 
 ### Library Details in WEB-INF
 
-Libraries located in `WEB-INF/lib/`:
-- MySQL Connector: Provides JDBC connectivity
-- Taglibs Standard Implementation: Supports JSP tag libraries
-  - `taglibs-standard-impl`: Core implementation
-  - `taglibs-standard-spec`: Tag library specifications
+#### Libraries in WEB-INF/lib/
+- `mysql-connector-java-8.x.x.jar`: JDBC driver for MySQL connectivity
+- `taglibs-standard-impl-1.2.x.jar`: JSP tag library implementation
+- `taglibs-standard-spec-1.2.x.jar`: JSP tag library specifications
+
+#### Additional Web Resources
+- `META-INF/`: Contains application metadata
+- `images/`: Stores static images used in the web application
+- `*.jsp`: Contains the JavaServer Pages for rendering views
 
 ### Importing Libraries in Eclipse
 1. Right-click project
