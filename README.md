@@ -132,10 +132,7 @@ root/
                 │   └── web.xml
                 ├── META-INF/
                 ├── images/
-                ├── *.jsp files
-                └── resources/
-                    ├── CSS/
-                    └── JS/
+                └── *.jsp files
 ```
 
 ### Directory Structure Breakdown
@@ -158,9 +155,6 @@ root/
   - `META-INF/`: Application metadata
   - `images/`: Image resources for the web application
   - `*.jsp`: JavaServer Pages (view layer)
-  - `resources/`: Static web resources
-    - `CSS/`: Cascading Style Sheets
-    - `JS/`: JavaScript files
 
 ### Library Details in WEB-INF
 
