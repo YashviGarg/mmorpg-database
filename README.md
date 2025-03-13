@@ -112,21 +112,44 @@ If Tomcat is not in the project:
 ## Project Structure
 
 ```
-game-webapp/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── game/
-│       │       ├── dal/       # Data Access Layer
-│       │       ├── model/     # Data Models
-│       │       └── servlet/   # Web Servlets
-│       └── webapp/
-│           ├── WEB-INF/
-│           │   └── web.xml
-│           └── JSP files
-└── database/
-    └── Milestone2_Group2.sql
+root/
+├── database/
+│   └── player_database.sql
+└── Milestone4/
+    └── src/
+        └── main/
+            ├── java/
+            │   └── game/
+            │       ├── dal/       # Data Access Layer
+            │       ├── model/     # Data Models
+            │       └── servlet/   # Web Servlets
+            └── webapp/
+                └── WEB-INF/
+                    ├── lib/
+                    │   ├── mysql-connector-java-8.x.x.jar
+                    │   ├── taglibs-standard-impl-1.2.x.jar
+                    │   └── taglibs-standard-spec-1.2.x.jar
+                    └── web.xml
 ```
+
+### Library Details in WEB-INF
+
+Libraries located in `WEB-INF/lib/`:
+- MySQL Connector: Provides JDBC connectivity
+- Taglibs Standard Implementation: Supports JSP tag libraries
+  - `taglibs-standard-impl`: Core implementation
+  - `taglibs-standard-spec`: Tag library specifications
+
+### Importing Libraries in Eclipse
+1. Right-click project
+2. Properties > Java Build Path
+3. Libraries tab
+4. Add JARs or External JARs
+5. Select the libraries from WEB-INF/lib/
+
+### Deployment Considerations
+- These libraries will be automatically packaged with the WAR file
+- Ensures consistent library versions across different environments
 
 ## Key Components
 
